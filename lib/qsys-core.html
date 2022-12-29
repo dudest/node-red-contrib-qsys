@@ -5,6 +5,10 @@
             host: { value: "", required: true },
             port: { value: 1023, required: true, validate: RED.validators.number() },
         },
+        credentials: {
+            username: { type: "text" },
+            password: { type: "password" }
+        },
         label: function () {
             return this.host + ":" + this.port;
         }
