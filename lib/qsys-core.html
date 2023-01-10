@@ -43,7 +43,7 @@
         <hr>
     </div>
     <div class="form-row">
-        <p><strong>Poll Group times</strong></p>
+        <p><strong>Change Group Polling</strong></p>
     </div>
     <div class="form-row">
         <label for="node-config-input-pollTime1"><i class="fa fa-clock-o"></i> group 1</label>
@@ -65,6 +65,26 @@
         <input style="width:50px" type="text" id="node-config-input-pollTime4">
         <label style="width:auto"> seconds</label>
     </div>
+    <div class="form-row">
+        <hr>
+    </div>
+    <div class="form-row">
+        <p><strong>Logging</strong></p>
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-logConnection"> connection</label>
+        <select style="width:fit-content" type="text" id="node-config-input-logConnection">
+            <option value="false">off</option>
+            <option value="true">on</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-logCommunications"> communications</label>
+        <select style="width:fit-content" type="text" id="node-config-input-logCommunications">
+            <option value="false">off</option>
+            <option value="true">on</option>
+        </select>
+    </div>
 </script>
 
 <script type="text/javascript">
@@ -72,7 +92,7 @@
         category: 'config',
         defaults: {
             host: { value: "", required: true },
-            port: { value: 1023, required: true, validate: RED.validators.number() },
+            port: { value: 1710, required: true, validate: RED.validators.number() },
             isRedundant: { value: "false" },
             redundantHost: { value: "" },
             authentication: { value: "false" },
@@ -80,6 +100,8 @@
             pollTime2: { value: 0.5, validate: RED.validators.number() },
             pollTime3: { value: 0.75, validate: RED.validators.number() },
             pollTime4: { value: 1, validate: RED.validators.number() },
+            logConnection: { value: "true" },
+            logCommunications: { value: "false" }
         },
         credentials: {
             username: { type: "text" },
