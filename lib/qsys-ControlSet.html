@@ -1,0 +1,39 @@
+<script type="text/html" data-template-name="qsys-trigger">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-topic"><i class="fa fa-tag"></i> topic</label>
+        <input type="text" id="node-input-topic" placeholder="Leave blank to inherit from input">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-globe"></i> Server</label>
+        <input type="text" id="node-input-server" placeholder="Server">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="qsys-trigger">
+
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType("qsys-trigger", {
+        category: 'QSys',
+        color: '#0076bf',
+        defaults: {
+            name: { value: "" },
+            topic: { value: "" },
+            server: {
+                value: "",
+                type: "qsys-core"
+            },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "qsc_logo.png",
+        label: function () {
+            return this.name || "qsys-trigger";
+        },
+    });
+</script>
