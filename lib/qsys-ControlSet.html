@@ -11,6 +11,19 @@
         <label for="node-input-server"><i class="fa fa-globe"></i> Server</label>
         <input type="text" id="node-input-server" placeholder="Server">
     </div>
+    <div class="form-row">
+        <label for="node-input-controlId"><i class="fa fa-tag"></i> id</label>
+        <input type="text" id="node-input-controlId" placeholder="Named Control">
+    </div>
+    <div class="form-row">
+        <label style="width:fit-content" for="node-input-changeGroup"><i class="fa fa-tag"></i> Change Group</label>
+        <select style="width:fit-content" type="text" id="node-input-changeGroup">
+            <option value="0">group 1</option>
+            <option value="1">group 2</option>
+            <option value="2">group 3</option>
+            <option value="3">group 4</option>
+        </select>
+    </div>
 </script>
 
 <script type="text/html" data-help-name="qsys-trigger">
@@ -28,12 +41,17 @@
                 value: "",
                 type: "qsys-core"
             },
+            controlId: {
+                value: "",
+                required: true
+            },
+            changeGroup: { value: "0" }
         },
         inputs: 1,
         outputs: 1,
         icon: "qsc_logo.png",
         label: function () {
-            return this.name || "qsys-trigger";
+            return this.name || this.controlId || "qsys-trigger";
         },
     });
 </script>
