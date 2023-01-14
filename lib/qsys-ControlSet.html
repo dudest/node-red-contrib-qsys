@@ -1,4 +1,4 @@
-<script type="text/html" data-template-name="qsys-trigger">
+<script type="text/html" data-template-name="qsys-ControlSet">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
@@ -26,12 +26,12 @@
     </div>
 </script>
 
-<script type="text/html" data-help-name="qsys-trigger">
+<script type="text/html" data-help-name="qsys-ControlSet">
 
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType("qsys-trigger", {
+    RED.nodes.registerType("qsys-ControlSet", {
         category: 'QSys',
         color: '#0076bf',
         defaults: {
@@ -51,7 +51,7 @@
         outputs: 1,
         icon: "qsc_logo.png",
         label: function () {
-            return this.name || this.controlId || "qsys-trigger";
+            return this.name || this.controlId || "qsys-ControlSet";
         },
     });
 </script>
