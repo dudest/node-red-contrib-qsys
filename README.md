@@ -32,10 +32,6 @@ $ npm install node-red-contrib-qsys
 - [Q-Sys website](https://www.qsys.com/)
 - [QRC Commands](https://q-syshelp.qsc.com/Content/External_Control_APIs/QRC/QRC_Commands.htm)
 
-# Feature Requests & Bug Reporting
+# Feature Requests / Bug Reporting
 
 Please report any bugs or issues to the repository [here](https://github.com/dudest/node-red-contrib-qsys/issues).
-
-# Discussions
-
-Any questions, ideas, suggestions? Post them to the repository's [discussions](https://github.com/dudest/node-red-contrib-qsys/discussions) section.
