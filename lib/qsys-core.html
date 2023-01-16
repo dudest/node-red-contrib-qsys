@@ -87,6 +87,38 @@
     </div>
 </script>
 
+<script type="text/html" data-help-name="qsys-core">
+    <p>Manages connection to <strong>Q-Sys Core</strong></p>
+    <h3>Edit Dialog Properties</h3>
+    <ol>
+        <li>
+            <dt>Host:</dt>
+            <dd>Core IP address</dd>
+        </li>
+        <li>
+            <dt>Port:</dt>
+            <dd>QRC Port. <em>1710</em> by default.</dd>
+        </li>
+        <li>
+            <dt>Is Redundant:</dt>
+            <dd>Select <em>Yes</em> if there is a redundant core and provide the redundant host IP address.</dd>
+        </li>
+        <li>
+            <dt>Authentication:</dt>
+            <dd>Select <em>Yes</em> if Core requires authenticaion for third party control.</dd>
+        </li>
+        <li>
+            <dt>Change Group Polling:</dt>
+            <dd>Enter auto poll rate for <em>poll groups</em>.</dd>
+        </li>
+        <li>
+            <dt>Logging:</dt>
+            <dd>Enable connection logging.</dd>
+            <dd>Enable communications logging.</dd>
+        </li>
+    </ol>
+</script>
+
 <script type="text/javascript">
     RED.nodes.registerType('qsys-core', {
         category: 'config',
