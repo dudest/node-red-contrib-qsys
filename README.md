@@ -36,6 +36,6 @@ $ npm install node-red-contrib-qsys
 
 Please report any bugs or issues to the repository [here](https://github.com/dudest/node-red-contrib-qsys/issues).
 
-## Todo
+# Task List
 
 - [ ] Lab test redundant core logic 
