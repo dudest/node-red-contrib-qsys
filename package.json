@@ -30,7 +30,8 @@
     "version": ">=3.0.1",
     "nodes": {
       "qsys-core": "lib/qsys-core.js",
-      "qsys-trigger": "lib/qsys-ControlSet.js"
+      "qsys-ControlSet": "lib/qsys-ControlSet.js",
+      "qsys-Presets": "lib/qsys-Presets.js"
     }
   },
   "engines": {

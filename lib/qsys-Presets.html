@@ -1,0 +1,64 @@
+<script type="text/html" data-template-name="qsys-Presets">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-globe"></i> Server</label>
+        <input type="text" id="node-input-server" placeholder="Server">
+    </div>
+    <div class="form-row">
+        <label for="node-input-controlId"><i class="fa fa-tag"></i> id</label>
+        <input type="text" id="node-input-controlId" placeholder="Preset Component">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="qsys-Presets">
+    <p>Recall a preset.</p>
+    <h3>Edit Dialog Properties</h3>
+    <ol>
+        <li>
+            <dt>Name:</dt>
+            <dd>Node name.</dd>
+        </li>
+        <li>
+            <dt>Server:</dt>
+            <dd>Configuration node.</dd>
+        </li>
+        <li>
+            <dt>Id:</dt>
+            <dd><em>Preset Component</em></dd>
+        </li>
+    </ol>
+    <h3>Input</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">number</span>
+        </dt>
+        <dd>Preset to recall.</dd>
+        <dd>If <code>topic</code> is <em>'Ramp'</em>, <code>payload</code> sets ramp time.</dd>
+    </dl>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType("qsys-Presets", {
+        category: 'QSys',
+        color: '#0076bf',
+        defaults: {
+            name: { value: "" },
+            server: {
+                value: "",
+                type: "qsys-core"
+            },
+            controlId: {
+                value: "",
+                required: true
+            }
+        },
+        inputs: 1,
+        icon: "qsc_logo.png",
+        label: function () {
+            return this.name || this.controlId || "qsys-Presets";
+        },
+    });
+</script>
