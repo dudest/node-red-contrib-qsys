@@ -2,6 +2,8 @@
 
 A collection of nodes for controlling Q-Sys.
 
+![screenshot](images/screenshot_01.png)
+
 ---
 
 # Getting Started
