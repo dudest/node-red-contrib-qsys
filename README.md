@@ -1,3 +1,9 @@
+[![platform](https://img.shields.io/badge/platform-Node--RED-red)](https://nodered.org)
+![npm](https://img.shields.io/npm/v/node-red-contrib-qsys.svg)
+![license](https://img.shields.io/npm/l/node-red-contrib-qsys.svg)
+![Npm package total downloads](https://badgen.net/npm/dt/node-red-contrib-qsys)
+![github-issues](https://img.shields.io/github/issues/dudest/node-red-contrib-qsys.svg)
+
 # node-red-contrib-qsys
 
 A collection of nodes for controlling Q-Sys.
