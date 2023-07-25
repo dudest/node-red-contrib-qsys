@@ -1,1 +1,135 @@
-[{"id":"c04cd5e9ea31cd3c","type":"tab","label":"presets","disabled":false,"info":"","env":[]},{"id":"b3a9cea7e705cbb3","type":"junction","z":"c04cd5e9ea31cd3c","x":240,"y":80,"wires":[["34df054b143893da"]]},{"id":"34df054b143893da","type":"qsys-Presets","z":"c04cd5e9ea31cd3c","name":"","server":"855ca905e4aba6c3","controlId":"input levels","x":350,"y":80,"wires":[]},{"id":"506c92376b96db5c","type":"inject","z":"c04cd5e9ea31cd3c","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"1","payloadType":"num","x":130,"y":40,"wires":[["b3a9cea7e705cbb3"]]},{"id":"d50a1f72f384094b","type":"inject","z":"c04cd5e9ea31cd3c","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"2","payloadType":"num","x":130,"y":80,"wires":[["b3a9cea7e705cbb3"]]},{"id":"108025916533be3e","type":"inject","z":"c04cd5e9ea31cd3c","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"Ramp","payload":"1.5","payloadType":"num","x":120,"y":160,"wires":[["b3a9cea7e705cbb3"]]},{"id":"855ca905e4aba6c3","type":"qsys-core","host":"127.0.0.1","port":"1710","isRedundant":"false","redundantHost":"","authentication":"true","pollTime1":"0.25","pollTime2":"0.5","pollTime3":"0.75","pollTime4":"1","logConnection":"true","logCommunications":"false"}]
+[
+    {
+        "id": "c04cd5e9ea31cd3c",
+        "type": "tab",
+        "label": "presets",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b3a9cea7e705cbb3",
+        "type": "junction",
+        "z": "c04cd5e9ea31cd3c",
+        "x": 240,
+        "y": 80,
+        "wires": [
+            [
+                "34df054b143893da"
+            ]
+        ]
+    },
+    {
+        "id": "34df054b143893da",
+        "type": "qsys-Presets",
+        "z": "c04cd5e9ea31cd3c",
+        "name": "",
+        "server": "855ca905e4aba6c3",
+        "controlId": "input levels",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "506c92376b96db5c",
+        "type": "inject",
+        "z": "c04cd5e9ea31cd3c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 130,
+        "y": 40,
+        "wires": [
+            [
+                "b3a9cea7e705cbb3"
+            ]
+        ]
+    },
+    {
+        "id": "d50a1f72f384094b",
+        "type": "inject",
+        "z": "c04cd5e9ea31cd3c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "b3a9cea7e705cbb3"
+            ]
+        ]
+    },
+    {
+        "id": "108025916533be3e",
+        "type": "inject",
+        "z": "c04cd5e9ea31cd3c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Ramp",
+        "payload": "1.5",
+        "payloadType": "num",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "b3a9cea7e705cbb3"
+            ]
+        ]
+    },
+    {
+        "id": "855ca905e4aba6c3",
+        "type": "qsys-core",
+        "host": "127.0.0.1",
+        "port": "1710",
+        "isRedundant": "false",
+        "redundantHost": "",
+        "authentication": "false",
+        "pollTime1": "0.25",
+        "pollTime2": "0.5",
+        "pollTime3": "0.75",
+        "pollTime4": "1",
+        "logConnection": "true",
+        "logCommunications": "false"
+    }
+]
