@@ -1,8 +1,8 @@
 [![platform](https://img.shields.io/badge/platform-Node--RED-red)](https://nodered.org)
-![npm](https://img.shields.io/npm/v/node-red-contrib-qsys.svg)
+[![npm](https://img.shields.io/npm/v/node-red-contrib-qsys.svg)](https://www.npmjs.com/package/node-red-contrib-qsys)
 ![license](https://img.shields.io/npm/l/node-red-contrib-qsys.svg)
-![Npm package total downloads](https://badgen.net/npm/dt/node-red-contrib-qsys)
-![github-issues](https://img.shields.io/github/issues/dudest/node-red-contrib-qsys.svg)
+[![Npm package total downloads](https://badgen.net/npm/dt/node-red-contrib-qsys)](https://www.npmjs.com/package/node-red-contrib-qsys)
+[![github-issues](https://img.shields.io/github/issues/dudest/node-red-contrib-qsys.svg)](https://github.com/dudest/node-red-contrib-qsys/issues)
 
 # node-red-contrib-qsys
 
@@ -15,9 +15,10 @@ A collection of nodes for controlling Q-Sys.
 ## Release Notes
 
 | Version | Description |
-|---|---|
-| 1.0.1 | Maintenance and documentation |
-| 1.0.0 | initial release |
+|---------|-------------------------------|
+| 1.0.2   | Updated dependencies          |
+| 1.0.1   | Maintenance and documentation |
+| 1.0.0   | initial release               |
 
 ---
 
