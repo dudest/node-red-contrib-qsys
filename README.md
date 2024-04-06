@@ -15,10 +15,11 @@ A collection of nodes for controlling Q-Sys.
 ## Release Notes
 
 | Version | Description |
-|---------|-------------------------------|
-| 1.0.2   | Updated dependencies          |
-| 1.0.1   | Maintenance and documentation |
-| 1.0.0   | initial release               |
+|---------|-------------------------------------------------|
+| 1.0.3   | Added `controlType` to **qsys-controlSet** node |
+| 1.0.2   | Updated dependencies                            |
+| 1.0.1   | Maintenance and documentation                   |
+| 1.0.0   | initial release                                 |
 
 ---
 
