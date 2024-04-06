@@ -16,6 +16,14 @@
         <input type="text" id="node-input-controlId" placeholder="Named Control">
     </div>
     <div class="form-row">
+        <label style="width:fit-content" for="node-input-controlType"><i class="fa fa-question-circle-o"></i> Control Type</label>
+        <select style="width:fit-content" type="text" id="node-input-controlType">
+            <option value="0">Value</option>
+            <option value="1">Position</option>
+            <option value="2">String</option>
+        </select>
+    </div>
+    <div class="form-row">
         <label style="width:fit-content" for="node-input-changeGroup"><i class="fa fa-tag"></i> Change Group</label>
         <select style="width:fit-content" type="text" id="node-input-changeGroup">
             <option value="0">group 1</option>
@@ -45,6 +53,10 @@
         <li>
             <dt>Id:</dt>
             <dd><em>Named Control</em></dd>
+        </li>
+        <li>
+            <dt>Type:</dt>
+            <dd><em>Value, position, or string</em></dd>
         </li>
         <li>
             <dt>Change Group:</dt>
@@ -80,6 +92,7 @@
                 value: "",
                 required: true
             },
+            controlType: { value: "0" },
             changeGroup: { value: "0" }
         },
         inputs: 1,
