@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\('dependencies:', JSON.stringify\\(p.dependencies||{}\\)\\); console.log\\('main:', p.main\\);\")",
+      "Bash(timeout 60 ssh symphony@10.10.17.2 'docker exec symphony-node-red-1 sh -c \" *)",
+      "Bash(timeout 30 ssh symphony@10.10.17.2 'echo \"=== /data/package.json qsys line ===\"; docker exec symphony-node-red-1 sh -c \"grep node-red-contrib-qsys /data/package.json 2>/dev/null || echo NOT_LISTED\"')",
+      "Bash(timeout 40 ssh symphony@10.10.17.2 'docker exec symphony-node-red-1 sh -c \"sed -i \\\\\"s/\\\\\\\\\\\\\"node-red-contrib-qsys\\\\\\\\\\\\\": \\\\\\\\\\\\\"1.0.4\\\\\\\\\\\\\"/\\\\\\\\\\\\\"node-red-contrib-qsys\\\\\\\\\\\\\": \\\\\\\\\\\\\"1.0.7\\\\\\\\\\\\\"/\\\\\" /data/package.json && grep node-red-contrib-qsys /data/package.json\"')"
+    ]
+  }
+}

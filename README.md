@@ -16,6 +16,7 @@ A collection of nodes for controlling Q-Sys.
 
 | Version | Description |
 |---------|-------------------------------------------------|
+| 1.0.8   | Remove listener leak across deploys; raise cap  |
 | 1.0.7   | Guard against null core node to fix crash       |
 | 1.0.6   | Improved connection robustness and reconnection |
 | 1.0.5   | Added socket keepalive and timeout handling     |
