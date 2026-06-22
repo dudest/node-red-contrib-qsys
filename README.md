@@ -16,6 +16,8 @@ A collection of nodes for controlling Q-Sys.
 
 | Version | Description |
 |---------|-------------------------------------------------|
+| 1.0.7   | Guard against null core node to fix crash       |
+| 1.0.6   | Improved connection robustness and reconnection |
 | 1.0.5   | Added socket keepalive and timeout handling     |
 | 1.0.4   | Added error catch before parsing JSON PR#9      |
 | 1.0.3   | Added `controlType` to **qsys-controlSet** node |
