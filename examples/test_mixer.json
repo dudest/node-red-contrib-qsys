@@ -1,0 +1,217 @@
+[
+    {
+        "id": "test_mixer_flow",
+        "type": "tab",
+        "label": "Q-SYS Test - Mixer4x2",
+        "disabled": false,
+        "info": "Test flow for Mixer4x2 controls on Q-SYS Core at 192.168.1.191"
+    },
+    {
+        "id": "mixer_gain_node",
+        "type": "qsys-ControlSet",
+        "z": "test_mixer_flow",
+        "name": "Mixer Gain Ch1",
+        "topic": "",
+        "server": "qsys_core_config",
+        "controlId": "Mixer4x2.gain.1",
+        "changeGroup": "0",
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "debug_gain"
+            ]
+        ]
+    },
+    {
+        "id": "debug_gain",
+        "type": "debug",
+        "z": "test_mixer_flow",
+        "name": "Gain Feedback",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 540,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "inject_0db",
+        "type": "inject",
+        "z": "test_mixer_flow",
+        "name": "0 dB",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "mixer_gain_node"
+            ]
+        ]
+    },
+    {
+        "id": "inject_minus10db",
+        "type": "inject",
+        "z": "test_mixer_flow",
+        "name": "-10 dB",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "-10",
+        "payloadType": "num",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "mixer_gain_node"
+            ]
+        ]
+    },
+    {
+        "id": "inject_minus20db",
+        "type": "inject",
+        "z": "test_mixer_flow",
+        "name": "-20 dB",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "-20",
+        "payloadType": "num",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "mixer_gain_node"
+            ]
+        ]
+    },
+    {
+        "id": "mixer_mute_node",
+        "type": "qsys-ControlSet",
+        "z": "test_mixer_flow",
+        "name": "Mixer Mute Ch1",
+        "topic": "",
+        "server": "qsys_core_config",
+        "controlId": "Mixer4x2.mute.1",
+        "changeGroup": "0",
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "debug_mute"
+            ]
+        ]
+    },
+    {
+        "id": "debug_mute",
+        "type": "debug",
+        "z": "test_mixer_flow",
+        "name": "Mute Feedback",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 540,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "inject_unmute",
+        "type": "inject",
+        "z": "test_mixer_flow",
+        "name": "Unmute (0)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "mixer_mute_node"
+            ]
+        ]
+    },
+    {
+        "id": "inject_mute",
+        "type": "inject",
+        "z": "test_mixer_flow",
+        "name": "Mute (1)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "mixer_mute_node"
+            ]
+        ]
+    },
+    {
+        "id": "qsys_core_config",
+        "type": "qsys-core",
+        "host": "192.168.1.191",
+        "port": "1710",
+        "isRedundant": "false",
+        "redundantHost": "",
+        "authentication": "false",
+        "pollTime1": "0.25",
+        "pollTime2": "0.5",
+        "pollTime3": "0.75",
+        "pollTime4": "1",
+        "logConnection": "true",
+        "logCommunications": "false"
+    }
+]

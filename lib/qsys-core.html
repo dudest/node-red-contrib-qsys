@@ -89,6 +89,12 @@
 
 <script type="text/html" data-help-name="qsys-core">
     <p>Manages connection to <strong>Q-Sys Core</strong></p>
+    <h3>Debug and Error Handling</h3>
+    <p>Use Node-RED's built-in catch and status nodes to monitor the node:</p>
+    <ul>
+        <li>Add a catch node to handle connection and runtime errors</li>
+        <li>Add a status node to monitor connection state changes</li>
+    </ul>
     <h3>Edit Dialog Properties</h3>
     <ol>
         <li>
@@ -119,7 +125,7 @@
     </ol>
 </script>
 
-<script type="text/javascript">
+<script>
     RED.nodes.registerType('qsys-core', {
         category: 'config',
         defaults: {
